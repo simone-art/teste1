@@ -1,0 +1,28 @@
+
+{
+
+    "pokemon": [
+        {
+        "name": "white-2",
+        "url": "https://pokeapi.co/api/v2/version/22/",
+        "index": "0"
+        },
+
+        {
+            "name": "black-2",
+            "url": "https://pokeapi.co/api/v2/version/21/",
+            "index": "1"
+        },
+
+        {
+            "name": "white",
+            "url": "https://pokeapi.co/api/v2/version/18/",
+            "index": "2"
+        }
+
+    ]
+}
+    
+    
+        
+
