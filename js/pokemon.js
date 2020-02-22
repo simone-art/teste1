@@ -25,12 +25,12 @@ function ConsultarPokemon() {
         return response.json();
         })
     .then(function(pokemon) {
-           console.log(pokemon)
+           console.log(pokemon.results[0].name)
     })
     .catch(err => console.log(err));
 }
 
-function MostrarPokemon(){
+function MostrarPokemon(pokemon){
     card.innerHTML = `
     <div id="cards">
     <h1>Name:${pokemon.name}</h1>
