@@ -36,41 +36,12 @@ function ConsultarPokemon() {
     
 }
 
-const select = document.getElementById('opcao');
-const opcoes = document.getElementById('opcao')
-opcoes.addEventListener('click', (e) => MostrarVariosPokemon());
-
-function MostrarVariosPokemon(){
-    let valorDez = document.getElementById(valorInput1);
-    valorDez = valorInput1.value
-    console.log(valorInput1.value)
-    let valorVinte = document.getElementById(valorInput2);
-    valorVinte = valorInput2.value
-    console.log(valorInput2.value)
-    let valorTrinta = document.getElementById(valorInput3);
-    valorTrinta = valorInput3.value
-    console.log(valorInput3.value)
-
-
-
-
+function MostrarSelectedPokemon(){
+    let valor = document.getElementById("opcoes").value;
+    let texto = document.getElementById("opcoes");
+    let selected = texto.options[texto.selectedIndex].text
+    console.log(selected)
 }
-
-{/* <img src= "https://pokeapi.co/api/v2/ability/${id}/effect_changes/effect"></img> */}
-
-// function MostrarPokemon(){
-//     let imagem = document.getElementsByTagName("img")[0]
-//     document.setAttribute("src", pokemon.results[id].sprites.front_default)
-    
-//     card.innerHTML = `
-//         <img src="${imagem}">
-//             <h1>Name:${pokemon.results[id].name}</h1>
-            
-//         `
-    
-//     .catch(err => console.log(err));
-// }
-
 
 
 
