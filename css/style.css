@@ -66,3 +66,17 @@ img{
     width: 200px;
     height: 200px;
 }
+
+h2{
+    width: 150px;
+    background-color: blueviolet;
+    font-size: 10px;
+    color: white;
+}
+
+.option-pokemon{
+    margin-top: 10px;
+    width: 300px;
+    background-color: cadetblue;
+    margin-bottom: 20px;
+}

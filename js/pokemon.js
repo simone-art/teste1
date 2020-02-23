@@ -30,11 +30,33 @@ function ConsultarPokemon() {
         card.innerHTML = `
         <h1>Name:${pokemon.results[id].name}</h1>
         <img src= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png">
-            
+        <h2> Tipo: "https://pokeapi.co/api/v2/type/${id}/"</h2>
         `
     })
     
 }
+
+const select = document.getElementById('opcao');
+const opcoes = document.getElementById('opcao')
+opcoes.addEventListener('click', (e) => MostrarVariosPokemon());
+
+function MostrarVariosPokemon(){
+    let valorDez = document.getElementById(valorInput1);
+    valorDez = valorInput1.value
+    console.log(valorInput1.value)
+    let valorVinte = document.getElementById(valorInput2);
+    valorVinte = valorInput2.value
+    console.log(valorInput2.value)
+    let valorTrinta = document.getElementById(valorInput3);
+    valorTrinta = valorInput3.value
+    console.log(valorInput3.value)
+
+
+
+
+}
+
+{/* <img src= "https://pokeapi.co/api/v2/ability/${id}/effect_changes/effect"></img> */}
 
 // function MostrarPokemon(){
 //     let imagem = document.getElementsByTagName("img")[0]
