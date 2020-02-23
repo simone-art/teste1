@@ -41,31 +41,38 @@ function ConsultarPokemon() {
         let valor = document.getElementById("opcoes").value;
         let texto = document.getElementById("opcoes");
         let selected = texto.options[texto.selectedIndex].text
-        const id = selectedValue.value
+        // const id = selectedValue.value
         console.log(selected)
 
-        fetch(`https://pokeapi.co/api/v2/pokemon?q=${id}offset=0&limit=10`)
+        fetch(`https://pokeapi.co/api/v2/pokemon?offset=0&limit=10`)
     
         .then(function (response) {
         return response.json();
         })
         .then(function(pokemon) {
-        // console.log(pokemon.results[id].name)
-        // console.log(pokemon.results[id].url)
+        console.log(pokemon.results.name)
+        console.log(pokemon.results.url)
+        console.log(pokemon)
 
         if (selected == 10){
-            let results = []
-            for (results = 0;  results.length < 10; results++) {
-                console.log(pokemon.results[1].name);
-              };
-            const html = `
-            <h1>Name:${pokemon.results[id].name}</h1>
-            <img src= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon?q=${id}offset=0&limit=9.png">
-            <h2> url: ${pokemon.results[id].url}</h2>
-            
-            `
-            const pokemonDiv = document.querySelector('.cards')
-            pokemonDiv.innerHTML = html;
+                const html = `
+                <h1>Name:${pokemon.results[0].name}</h1>
+                <h1>Name:${pokemon.results[1].name}</h1>
+                <h1>Name:${pokemon.results[2].name}</h1>
+                <h1>Name:${pokemon.results[3].name}</h1>
+                <h1>Name:${pokemon.results[4].name}</h1>
+                <h1>Name:${pokemon.results[5].name}</h1>
+                <h1>Name:${pokemon.results[6].name}</h1>
+                <h1>Name:${pokemon.results[7].name}</h1>
+                <h1>Name:${pokemon.results[8].name}</h1>
+                <h1>Name:${pokemon.results[9].name}</h1>
+
+                <h2> url: ${pokemon.results[0].url}</h2>
+                
+                `
+                const pokemonDiv = document.querySelector('.cards')
+                pokemonDiv.innerHTML = html;
+
         }
         
     })
