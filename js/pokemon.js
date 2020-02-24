@@ -10,7 +10,6 @@ const selectedValue = document.getElementById("valorInput")
 const pokemon = "https://pokeapi.co/api/v2/pokemon/"
 
 
-
 //FUNÇAO NO BOTÂO//
 botao.addEventListener('click', (e) => ConsultarPokemon());
 
@@ -117,19 +116,96 @@ function MostrarSelectedPokemon() {
                 <img src= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10.png">
 
                 `
-                
-                // <h1>Name:${pokemon.results[3].name}</h1>
-                // <h1>Name:${pokemon.results[4].name}</h1>
-                // <h1>Name:${pokemon.results[5].name}</h1>
-                // <h1>Name:${pokemon.results[6].name}</h1>
-                // <h1>Name:${pokemon.results[7].name}</h1>
-                // <h1>Name:${pokemon.results[8].name}</h1>
-                // // <h1>Name:${pokemon.results[9].name}</h1>
+        
 
-                // <h2> url: ${pokemon.results[0].url}</h2>
+            }
 
-                // `
+        })
+}
 
+
+function MostrarSelectedPokemonVinte() {
+
+    let valor = document.getElementById("opcoes").value;
+    let texto = document.getElementById("opcoes");
+    let selected = texto.options[texto.selectedIndex].text
+    // const id = []
+    // let name = []
+    console.log(selected)
+
+    fetch(`https://pokeapi.co/api/v2/pokemon?offset=10&limit=20`)
+
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (pokemon) {
+            console.log(pokemon.results)
+            console.log(pokemon.results.url)
+            console.log(pokemon)
+
+            if (selected == 20) {
+
+                let pokemonResults = []
+                const id = selected.value;
+
+                // function getName(item) {
+                //     let fullname = [item.name].join("");
+                //     return fullname;
+                // }
+
+                // function getUrl(item) {
+                //     let fullurl = [item.url].join(" ");
+                //     return fullurl;
+                // }
+
+                card1.innerHTML = `
+                <h1>Name:${pokemon.results[10].name}</h1>
+                <img src= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/11.png">
+                `
+                card2.innerHTML = `
+                <h1>Name:${pokemon.results[11].name}</h1>
+                <img src= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/12.png">
+            `
+                card3.innerHTML = `
+                <h1>Name:${pokemon.results[12].name}</h1>
+                <img src= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/13.png">
+
+                `
+                card4.innerHTML = `
+                <h1>Name:${pokemon.results[13].name}</h1>
+                <img src= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/14.png">
+
+                `
+                card5.innerHTML = `
+                <h1>Name:${pokemon.results[14].name}</h1>
+                <img src= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/15.png">
+                `
+                card6.innerHTML = `
+                <h1>Name:${pokemon.results[15].name}</h1>
+                <img src= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/16.png">
+
+                `
+                card7.innerHTML = `
+                <h1>Name:${pokemon.results[16].name}</h1>
+                <img src= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/17.png">
+
+                `
+                card8.innerHTML = `
+                <h1>Name:${pokemon.results[17].name}</h1>
+                <img src= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/18.png">
+
+                `
+                card9.innerHTML = `
+                <h1>Name:${pokemon.results[18].name}</h1>
+                <img src= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/19.png">
+
+                `
+                card10.innerHTML = `
+                <h1>Name:${pokemon.results[19].name}</h1>
+                <img src= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/20.png">
+
+                `
+        
 
             }
 
