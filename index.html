@@ -1,23 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
     <title>Pokemon</title>
 </head>
+
 <body>
 
     <section class="container-pikachu">
         <div class="pikachu-portada">
             <div class="card-pikachu">
-                <img class="img-pikachu"src="./img/logo.png" alt="imagem do pokemon">   
-                <p class="texto-site"><strong>O site oficial do Pokemon 
-                para voce aprender mais!</p></strong>
-        </div>
+                <img class="img-pikachu" src="./img/logo.png" alt="imagem do pokemon">
+                <p class="texto-site"><strong>O site oficial do Pokemon
+                        para voce aprender mais!</p></strong>
+            </div>
         </div>
 
     </section>
+
+    <section>
+        <div class="container-input">
+            <input class="input-pokemon" type="text" placeholder="número inicial">
+            <input class="input-pokemon" type="text" placeholder="número final">
+            <input id="pokemon-numero" class="input-pokemon" type="text" placeholder="digite o número do pokemon">
+            <button class="btn-information"><span>Carregar Pokemon</span></button>
+        </div>
+            <div class="options">
+            <select id="opcoes" class="option-pokemon">
+                <option value="">Seleciona a quantidade de Pokemon</option>
+                <option id="valorInput" value="10">10</option>
+                <option id="valorInput" value="20">20</option>
+                <option id="valorInput" value="30">30</option>
+            </select>
+            <button class="btn-information" onclick="MostrarSelectedPokemon()">Carregar Pokemones</button>
+            </div>
+    </section>
+
 
     <section id="container-pokemon">
         <div id="Pokemon" class="cards">
@@ -49,7 +70,7 @@
                 <h3>Card 5</h3>
 
             </div>
-        </div> 
+        </div>
     </section>
 
 
@@ -83,30 +104,13 @@
                 <h3>Card 10</h3>
 
             </div>
-        </div> 
+        </div>
     </section>
 
-        <div class="container-black">
-            <input class="input-pokemon" type="text" placeholder="número inicial">
-            <input class="input-pokemon" type="text" placeholder="número final">
-            <input id="pokemon-numero" class="input-pokemon" type="text" placeholder="digite o número do pokemon">
-            <!-- <p class="texto-statitics"><strong>Statistics of Game</p></strong> -->
-            <button class="btn-information">Carregar Pokemon</button>
 
-            <select id="opcoes" class="option-pokemon">
-                <option value="">Seleciona a quantidade de Pokemon</option>
-                <option id="valorInput" value="10">10</option>
-                <option id="valorInput" value="20">20</option>
-                <option id="valorInput" value="30">30</option>
-            </select>
-            <button class="btn-information" onclick="MostrarSelectedPokemon()">Selecionar Número Pokemon</button>
-        </div>
-        
-        <div>
-        </div>
 
-    
 
     <script src="./js/pokemon.js"></script>
 </body>
+
 </html>
