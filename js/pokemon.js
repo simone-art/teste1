@@ -58,40 +58,66 @@ function MostrarSelectedPokemon() {
             if (selected == 10) {
 
                 let pokemonResults = []
-                
-                function getName(item) {
-                    let fullname = [item.name].join("");
-                    return fullname;
-                }
+                const id = selected.value;
 
-                function getUrl(item) {
-                    let fullurl = [item.url].join(" ");
-                    return fullurl;
-                }
+                // function getName(item) {
+                //     let fullname = [item.name].join("");
+                //     return fullname;
+                // }
+
+                // function getUrl(item) {
+                //     let fullurl = [item.url].join(" ");
+                //     return fullurl;
+                // }
 
                 card1.innerHTML = `
-                <h1>Name:${pokemon.results.map(getName)}</h1>
-                <h1>Url:${pokemon.results.map(getUrl)}</h1>
+                <h1>Name:${pokemon.results[0].name}</h1>
+                <img src= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png">
                 `
                 card2.innerHTML = `
-                <h1>Name:${pokemon.results.map(getName)}</h1>
+                <h1>Name:${pokemon.results[1].name}</h1>
+                <img src= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png">
             `
-                // card3.innerHTML = `
-                // <h1>Name:${pokemon.results[2].name}</h1>
+                card3.innerHTML = `
+                <h1>Name:${pokemon.results[2].name}</h1>
+                <img src= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png">
 
-                // `
-                // card3.innerHTML = `
-                // <h1>Name:${pokemon.results[3].name}</h1>
+                `
+                card4.innerHTML = `
+                <h1>Name:${pokemon.results[3].name}</h1>
+                <img src= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png">
 
-                // `
-                // card4.innerHTML = `
-                // <h1>Name:${pokemon.results[4].name}</h1>
+                `
+                card5.innerHTML = `
+                <h1>Name:${pokemon.results[4].name}</h1>
+                <img src= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png">
+                `
+                card6.innerHTML = `
+                <h1>Name:${pokemon.results[5].name}</h1>
+                <img src= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png">
 
-                // `
-                // card5.innerHTML = `
-                // <h1>Name:${pokemon.results[5].name}</h1>
+                `
+                card7.innerHTML = `
+                <h1>Name:${pokemon.results[6].name}</h1>
+                <img src= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png">
 
-                // `
+                `
+                card8.innerHTML = `
+                <h1>Name:${pokemon.results[7].name}</h1>
+                <img src= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/8.png">
+
+                `
+                card9.innerHTML = `
+                <h1>Name:${pokemon.results[8].name}</h1>
+                <img src= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png">
+
+                `
+                card10.innerHTML = `
+                <h1>Name:${pokemon.results[9].name}</h1>
+                <img src= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10.png">
+
+                `
+                
                 // <h1>Name:${pokemon.results[3].name}</h1>
                 // <h1>Name:${pokemon.results[4].name}</h1>
                 // <h1>Name:${pokemon.results[5].name}</h1>
@@ -109,31 +135,3 @@ function MostrarSelectedPokemon() {
 
         })
 }
-
-//Criar Cards//
-
-// const cardNames = [];
-// const cardUrl = [];
-
-// function cardCreate (cardNames, cardUrl){
-//     this.cardNames = cardNames
-//     this.cardUrl = cardUrl
-// }
-
-// const createDesk = () => {
-// let desk = []
-// deck.length = 0;
-// cardNames.forEach(_cardName => {
-// cardUrl.forEach(_cardUrl => {
-//     desk.push(newCard(_cardName, _cardUrl));
-//     console.log(deck)
-//     deck.forEach(_cardCreate => {
-//         let eachCard = document.createElement('div');
-//         eachCard.innerHTML = cardCreate.cardNames + "" + cardCreate.cardUrl;
-//         eachCard.classList.add('cards')
-//         document.getElementById("container-deck").appendChild(eachCard);
-//     })
-// })
-
-// })
-// }
