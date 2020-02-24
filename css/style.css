@@ -2,19 +2,23 @@
     box-sizing: border-box;
 }
 
+#container-pokemon {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+
 
 
 .cards {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 200px;
-    box-shadow: 0 4px 8px 0 blue;
-    border-radius: 5px;
-    background-color: cadetblue;
-    transition: 0.3s;
-    width: 40%;
-    height: 10%;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    width: 250px;
+    padding: 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+    margin-right: 20px;
 
 }
 .cards:hover {
@@ -44,6 +48,7 @@
     height: 50px;
     background-color: black;
     border-radius: 10px;
+    margin-top: 40px;
 }
 
 .input-pokemon{
@@ -90,3 +95,4 @@ h2{
     background-color: cadetblue;
     margin-bottom: 20px;
 }
+

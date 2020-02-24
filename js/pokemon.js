@@ -55,25 +55,44 @@ function ConsultarPokemon() {
 
         if (selected == 10){
 
-            let results = []
-            let names = results.map(function(){
-                return results.name
-            })
-            card.innerHTML = `
-                <h1>Name:${pokemon.results[0].name}</h1>
-                <h1>Name:${pokemon.results[1].name}</h1>
-                <h1>Name:${pokemon.results[2].name}</h1>
-                <h1>Name:${pokemon.results[3].name}</h1>
-                <h1>Name:${pokemon.results[4].name}</h1>
-                <h1>Name:${pokemon.results[5].name}</h1>
-                <h1>Name:${pokemon.results[6].name}</h1>
-                <h1>Name:${pokemon.results[7].name}</h1>
-                <h1>Name:${pokemon.results[8].name}</h1>
-                // <h1>Name:${pokemon.results[9].name}</h1>
+            // let results = []
+            // let names = results.map(function(){
+            //     return results.name
+            // })
 
-                <h2> url: ${pokemon.results[0].url}</h2>
-                
+            card1.innerHTML = `
+                <h1>Name:${pokemon.results[0].name}</h1>
                 `
+            card2.innerHTML = `
+                <h1>Name:${pokemon.results[1].name}</h1>
+            `
+            card3.innerHTML = `
+            <h1>Name:${pokemon.results[2].name}</h1>
+            
+            `
+            card3.innerHTML = `
+            <h1>Name:${pokemon.results[3].name}</h1>
+            
+            `
+            card4.innerHTML = `
+            <h1>Name:${pokemon.results[4].name}</h1>
+            
+            `
+            card5.innerHTML = `
+            <h1>Name:${pokemon.results[5].name}</h1>
+            
+            `
+                // <h1>Name:${pokemon.results[3].name}</h1>
+                // <h1>Name:${pokemon.results[4].name}</h1>
+                // <h1>Name:${pokemon.results[5].name}</h1>
+                // <h1>Name:${pokemon.results[6].name}</h1>
+                // <h1>Name:${pokemon.results[7].name}</h1>
+                // <h1>Name:${pokemon.results[8].name}</h1>
+                // // <h1>Name:${pokemon.results[9].name}</h1>
+
+                // <h2> url: ${pokemon.results[0].url}</h2>
+                
+                // `
                 
 
         }
@@ -83,28 +102,28 @@ function ConsultarPokemon() {
 
 //Criar Cards//
 
-const cardNames = [];
-const cardUrl = [];
+// const cardNames = [];
+// const cardUrl = [];
 
-function cardCreate (cardNames, cardUrl){
-    this.cardNames = cardNames
-    this.cardUrl = cardUrl
-}
+// function cardCreate (cardNames, cardUrl){
+//     this.cardNames = cardNames
+//     this.cardUrl = cardUrl
+// }
 
-const createDesk = () => {
-let desk = []
-deck.length = 0;
-cardNames.forEach(_cardName => {
-cardUrl.forEach(_cardUrl => {
-    desk.push(newCard(_cardName, _cardUrl));
-    console.log(deck)
-    deck.forEach(_cardCreate => {
-        let eachCard = document.createElement('div');
-        eachCard.innerHTML = cardCreate.cardNames + "" + cardCreate.cardUrl;
-        eachCard.classList.add('cards')
-        document.getElementById("container-deck").appendChild(eachCard);
-    })
-})
+// const createDesk = () => {
+// let desk = []
+// deck.length = 0;
+// cardNames.forEach(_cardName => {
+// cardUrl.forEach(_cardUrl => {
+//     desk.push(newCard(_cardName, _cardUrl));
+//     console.log(deck)
+//     deck.forEach(_cardCreate => {
+//         let eachCard = document.createElement('div');
+//         eachCard.innerHTML = cardCreate.cardNames + "" + cardCreate.cardUrl;
+//         eachCard.classList.add('cards')
+//         document.getElementById("container-deck").appendChild(eachCard);
+//     })
+// })
 
-})
-}
+// })
+// }
