@@ -158,49 +158,49 @@ function MostrarSelectedPokemonVinte() {
                 //     return fullurl;
                 // }
 
-                card1.innerHTML = `
+                card11.innerHTML = `
                 <h1>Name:${pokemon.results[10].name}</h1>
                 <img src= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/11.png">
                 `
-                card2.innerHTML = `
+                card12.innerHTML = `
                 <h1>Name:${pokemon.results[11].name}</h1>
                 <img src= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/12.png">
             `
-                card3.innerHTML = `
+                card13.innerHTML = `
                 <h1>Name:${pokemon.results[12].name}</h1>
                 <img src= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/13.png">
 
                 `
-                card4.innerHTML = `
+                card14.innerHTML = `
                 <h1>Name:${pokemon.results[13].name}</h1>
                 <img src= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/14.png">
 
                 `
-                card5.innerHTML = `
+                card15.innerHTML = `
                 <h1>Name:${pokemon.results[14].name}</h1>
                 <img src= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/15.png">
                 `
-                card6.innerHTML = `
+                card16.innerHTML = `
                 <h1>Name:${pokemon.results[15].name}</h1>
                 <img src= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/16.png">
 
                 `
-                card7.innerHTML = `
+                card17.innerHTML = `
                 <h1>Name:${pokemon.results[16].name}</h1>
                 <img src= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/17.png">
 
                 `
-                card8.innerHTML = `
+                card18.innerHTML = `
                 <h1>Name:${pokemon.results[17].name}</h1>
                 <img src= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/18.png">
 
                 `
-                card9.innerHTML = `
+                card19.innerHTML = `
                 <h1>Name:${pokemon.results[18].name}</h1>
                 <img src= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/19.png">
 
                 `
-                card10.innerHTML = `
+                card20.innerHTML = `
                 <h1>Name:${pokemon.results[19].name}</h1>
                 <img src= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/20.png">
 
@@ -211,3 +211,94 @@ function MostrarSelectedPokemonVinte() {
 
         })
 }
+
+
+
+function MostrarSelectedPokemonTrinta() {
+
+    let valor = document.getElementById("opcoes").value;
+    let texto = document.getElementById("opcoes");
+    let selected = texto.options[texto.selectedIndex].text
+    // const id = []
+    // let name = []
+    console.log(selected)
+
+    fetch(`https://pokeapi.co/api/v2/pokemon?offset=21&limit=30`)
+
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (pokemon) {
+            console.log(pokemon.results)
+            console.log(pokemon.results.url)
+            console.log(pokemon)
+
+            if (selected == 30) {
+
+                let pokemonResults = []
+                const id = selected.value;
+
+                // function getName(item) {
+                //     let fullname = [item.name].join("");
+                //     return fullname;
+                // }
+
+                // function getUrl(item) {
+                //     let fullurl = [item.url].join(" ");
+                //     return fullurl;
+                // }
+
+                card21.innerHTML = `
+                <h1>Name:${pokemon.results[20].name}</h1>
+                <img src= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/21.png">
+                `
+                card22.innerHTML = `
+                <h1>Name:${pokemon.results[21].name}</h1>
+                <img src= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/22.png">
+            `
+                card23.innerHTML = `
+                <h1>Name:${pokemon.results[22].name}</h1>
+                <img src= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/23.png">
+
+                `
+                card24.innerHTML = `
+                <h1>Name:${pokemon.results[23].name}</h1>
+                <img src= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/24.png">
+
+                `
+                card25.innerHTML = `
+                <h1>Name:${pokemon.results[24].name}</h1>
+                <img src= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png">
+                `
+                card26.innerHTML = `
+                <h1>Name:${pokemon.results[25].name}</h1>
+                <img src= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/26.png">
+
+                `
+                card27.innerHTML = `
+                <h1>Name:${pokemon.results[26].name}</h1>
+                <img src= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/27.png">
+
+                `
+                card28.innerHTML = `
+                <h1>Name:${pokemon.results[27].name}</h1>
+                <img src= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/28.png">
+
+                `
+                card29.innerHTML = `
+                <h1>Name:${pokemon.results[28].name}</h1>
+                <img src= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/29.png">
+
+                `
+                card30.innerHTML = `
+                <h1>Name:${pokemon.results[29].name}</h1>
+                <img src= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/30.png">
+
+                `
+        
+
+            }
+
+        })
+}
+
