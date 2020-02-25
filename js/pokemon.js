@@ -329,16 +329,18 @@ cardsPokemon.addEventListener('click', function(){
 
 function mostrarModal(){
     const modal = document.getElementById("card1")
-    const texto = document.createElement("p");
+    const buttonFechar = document.getElementById("button-fechar")
     modal.classList.add("modal");
-    modal.appendChild(texto)
+    modal.appendChild(buttonFechar)
 }
 
-const btnFechar = document.getElementById('button-fechar')
-btnFechar.addEventListener('click', function(evento){
-    evento.preventDefault();
-    console.log("funciona") 
+//FUNÇAO PARA ESCONDER O MODAL//
 
+const btnFechar = document.getElementById('button-fechar')
+btnFechar.addEventListener('click', function(){
+    const modal = document.getElementById("card1")
+    modal.style.display="none";
+       
 })
 
 
