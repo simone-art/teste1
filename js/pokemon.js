@@ -319,7 +319,7 @@ function MostrarSelectedPokemon() {
 // }
 
 
-//FUNÇÃO PARA MOSTRAR O MODAL//
+//FUNÇÃO PARA MOSTRAR O MODAL1//
 
 const cardsPokemon = document.getElementById("card1")
 cardsPokemon.addEventListener('click', function(){
@@ -343,20 +343,28 @@ btnFechar.addEventListener('click', function(){
        
 })
 
+//FUNÇÃO PARA MOSTRAR O MODAL2//
 
+const cardsPokemon2 = document.getElementById("card2")
+cardsPokemon2.addEventListener('click', function(){
+    mostrarModalDos()
 
-// function mostrarModal(modalId){
-//     const modal = document.getElementById(modalId)
-//     if (modal){
-//         modal.classList.add('mostrar');
-//         modal.addEventListener('click',(e) => {
-//             if (e.target.id == modalId || e.target.className == 'fechar')
-//             modal.classList.remove('mostrar');
-//         })
-//     }
-// }
+})
 
-// mostrarModal()
+function mostrarModalDos(){
+    const modal2 = document.getElementById("card2")
+    const buttonFechar2 = document.getElementById("button-fechar-2")
+    modal2.classList.add("modal-2");
+    modal2.appendChild(buttonFechar2)
+}
 
+//FUNÇAO PARA ESCONDER O MODAL//
+
+const btnFechar2 = document.getElementById('button-fechar-2')
+btnFechar2.addEventListener('click', function(){
+    const modal2 = document.getElementById("card2")
+    modal2.style.display="none";
+       
+})
 
 

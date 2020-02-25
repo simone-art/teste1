@@ -185,7 +185,7 @@ h2{
     display: none
 }
 
-.modal {
+.modal, .modal-2 {
 display: flex;
 background: white;
 width: 60%;
