@@ -319,10 +319,31 @@ function MostrarSelectedPokemon() {
 // }
 
 
+//FUNÇÃO PARA MOSTRAR O MODAL//
+
+const btnFechar = document.getElementById('button-fechar')
+btnFechar.addEventListener('click', function(evento){
+    evento.preventDefault();
+    console.log("funciona") 
+
+})
+
+// function mostrarModal(modalId){
+//     const modal = document.getElementById(modalId)
+//     if (modal){
+//         modal.classList.add('mostrar');
+//         modal.addEventListener('click',(e) => {
+//             if (e.target.id == modalId || e.target.className == 'fechar')
+//             modal.classList.remove('mostrar');
+//         })
+//     }
+// }
+
+// mostrarModal()
 
 
 // const cardsPokemon = document.getElementById("card1")
 // cardsPokemon.addEventListener('click', function(){
-//     alert("Informaçao Pokemon")
+//     mostrarModal()
 
-// }
+// })
