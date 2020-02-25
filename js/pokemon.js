@@ -72,6 +72,10 @@ function MostrarSelectedPokemon() {
                 card1.innerHTML = `
                 <h1>Nome:${pokemon.results[0].name}</h1>
                 <img src= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png">
+                    <p>Some text. Some text. Some text.</p>
+                    <p>Some text. Some text. Some text.</p>
+                   
+                
                 `
                 card2.innerHTML = `
                 <h1>Nome:${pokemon.results[1].name}</h1>
@@ -302,8 +306,24 @@ function MostrarSelectedPokemonTrinta() {
         })
 }
 
-const cardsPokemon = document.getElementById("card1")
-cardsPokemon.addEventListener('click', function(){
-    alert("Informaçao Pokemon")
+function mostrarCards(){
 
-})
+    const buttonModal = document.getElementById("btn-modal")
+    buttonModal.addEventListener('click', function(evento){
+        console.log("botão funciona")
+        evento.preventDefault()
+        let modalPokemon = document.getElementById("card1")
+        let buttonModalPokemon = document.createElement("h2");
+        let buttonModalPokemonTexto = document.createElement("p");
+        modalPokemon.appendChild(buttonModalPokemon);
+        modalPokemon.appendChild(buttonModalPokemonTexto)
+    })
+}
+
+
+// const cardsPokemon = document.getElementById("card1")
+// cardsPokemon.addEventListener('click', function(){
+//     alert("Informaçao Pokemon")
+
+// })
+
