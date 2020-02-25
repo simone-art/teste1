@@ -186,6 +186,7 @@ h2{
 }
 
 .modal {
+display: flex;
 background: white;
 width: 60%;
 min-width: 300px;
@@ -211,9 +212,6 @@ position: relative;
 
 }
 
-.modal-container .mostrar{
-    display: flex;
-}
 
 
 /* //MEDIA QUARE// */

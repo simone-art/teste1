@@ -321,12 +321,27 @@ function MostrarSelectedPokemon() {
 
 //FUNÇÃO PARA MOSTRAR O MODAL//
 
+const cardsPokemon = document.getElementById("card1")
+cardsPokemon.addEventListener('click', function(){
+    mostrarModal()
+
+})
+
+function mostrarModal(){
+    const modal = document.getElementById("card1")
+    const texto = document.createElement("p");
+    modal.classList.add("modal");
+    modal.appendChild(texto)
+}
+
 const btnFechar = document.getElementById('button-fechar')
 btnFechar.addEventListener('click', function(evento){
     evento.preventDefault();
     console.log("funciona") 
 
 })
+
+
 
 // function mostrarModal(modalId){
 //     const modal = document.getElementById(modalId)
@@ -342,8 +357,4 @@ btnFechar.addEventListener('click', function(evento){
 // mostrarModal()
 
 
-// const cardsPokemon = document.getElementById("card1")
-// cardsPokemon.addEventListener('click', function(){
-//     mostrarModal()
 
-// })
