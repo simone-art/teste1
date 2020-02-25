@@ -47,19 +47,6 @@ body {
 
 
 
-/* .card-pikachu {
-    width: 400px;
-    height: 200px;
-    background-color: #40C4FF;
-    box-shadow: 0 4px 8px 0;
-    border-radius: 10px;
-    
-} */
-
-/* .card-pikachu:hover {
-    box-shadow: 0 8px 16px 0 white;
-} */
-
 #container-pokemon, #container-pokemon2 {
     display: flex;
     flex-direction: row;
@@ -118,6 +105,7 @@ body {
 .input-pokemon{
     width: 400px;
     margin-right: 20px;
+    border: 1px solid;
 }
 
 
@@ -168,4 +156,401 @@ h2{
     border-radius: 20px;
     border-color: #0288d1;
 }
+
+/* //MEDIA QUARE// */
+
+@media (max-width: 320px){
+    .container-pikachu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .card-pikachu {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    
+    .img-pikachu {
+        position: absolute;
+        left: -35px;
+        top: -20px;
+        width: 200px;
+        height: 200px;
+        margin-top: 100px;
+    }
+    
+    
+    .texto-site {
+        position: absolute;
+        left: 50px;
+        top: 250px;
+        width: 300px;
+        font-size: 40px;
+        color: white;
+    }
+
+    .container-input{
+        display: flex;
+        flex-direction: column;
+        width: 100px;
+        height: 50px;
+        border-radius: 10px;
+        margin-top: 100px;
+        margin-bottom: 80px;
+    
+    }
+
+    .options {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .input-pokemon{
+        width: 300px;
+        margin-right: 20px;
+        margin-bottom: 10px;
+        border: 1px solid;
+    }
+
+    .option-pokemon{
+        width: 250px;
+        background-color:#ffff00;
+        margin-bottom: 30px;
+        font-size: 15px;
+        border-radius: 20px;
+        border-color: #0288d1;
+    }
+
+    #opcoes {
+        margin-left: 50px;
+        margin-bottom: 10px;
+    }
+
+    #container-pokemon, #container-pokemon2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        margin-left: 20px;
+    }
+    
+}
+
+
+@media (max-width: 375px){
+    .container-pikachu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .card-pikachu {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    
+    .img-pikachu {
+        position: absolute;
+        left: -35px;
+        top: -20px;
+        width: 200px;
+        height: 200px;
+        margin-top: 100px;
+    }
+    
+    
+    .texto-site {
+        position: absolute;
+        left: 50px;
+        top: 250px;
+        width: 300px;
+        font-size: 40px;
+        color: white;
+    }
+
+    .container-input{
+        display: flex;
+        flex-direction: column;
+        width: 100px;
+        height: 50px;
+        border-radius: 10px;
+        margin-top: 100px;
+        margin-bottom: 80px;
+    
+    }
+
+    .options {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .input-pokemon{
+        width: 300px;
+        margin-right: 20px;
+        margin-bottom: 10px;
+        border: 1px solid;
+    }
+
+    .option-pokemon{
+        width: 250px;
+        background-color:#ffff00;
+        margin-bottom: 30px;
+        font-size: 15px;
+        border-radius: 20px;
+        border-color: #0288d1;
+    }
+
+    #opcoes {
+        margin-left: 50px;
+        margin-bottom: 10px;
+    }
+
+    #container-pokemon, #container-pokemon2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        margin-left: 20px;
+    }
+    
+}
+
+
+@media (max-width: 425px){
+    .container-pikachu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .card-pikachu {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    
+    .img-pikachu {
+        position: absolute;
+        left: -35px;
+        top: -20px;
+        width: 200px;
+        height: 200px;
+        margin-top: 100px;
+    }
+    
+    
+    .texto-site {
+        position: absolute;
+        left: 50px;
+        top: 250px;
+        width: 300px;
+        font-size: 40px;
+        color: white;
+    }
+
+    .container-input{
+        display: flex;
+        flex-direction: column;
+        width: 100px;
+        height: 50px;
+        border-radius: 10px;
+        margin-top: 100px;
+        margin-bottom: 80px;
+    
+    }
+
+    .options {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .input-pokemon{
+        width: 300px;
+        margin-right: 20px;
+        margin-bottom: 10px;
+        border: 1px solid;
+    }
+
+    .option-pokemon{
+        width: 250px;
+        background-color:#ffff00;
+        margin-bottom: 30px;
+        font-size: 15px;
+        border-radius: 20px;
+        border-color: #0288d1;
+    }
+
+    #opcoes {
+        margin-left: 50px;
+        margin-bottom: 10px;
+    }
+
+    #container-pokemon, #container-pokemon2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        margin-left: 20px;
+    }
+    
+}
+
+
+@media (max-width: 768px){
+    .container-pikachu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .card-pikachu {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    
+    .img-pikachu {
+        position: absolute;
+        left: -35px;
+        top: -20px;
+        width: 200px;
+        height: 200px;
+        margin-top: 100px;
+    }
+    
+    
+    .texto-site {
+        position: absolute;
+        left: 50px;
+        top: 250px;
+        width: 300px;
+        font-size: 40px;
+        color: white;
+    }
+
+    .container-input{
+        display: flex;
+        flex-direction: column;
+        width: 100px;
+        height: 50px;
+        border-radius: 10px;
+        margin-top: 100px;
+        margin-bottom: 80px;
+    
+    }
+
+    .options {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .input-pokemon{
+        width: 150px;
+        margin-left: 50px;
+        margin-bottom: 10px;
+        border: 1px solid;
+    }
+
+    .option-pokemon{
+        width: 300px;
+        background-color:#ffff00;
+        margin-bottom: 30px;
+        font-size: 10px;
+        border-radius: 20px;
+        border-color: #0288d1;
+    }
+
+    #opcoes {
+        margin-left: 50px;
+        margin-bottom: 10px;
+    }
+
+    #container-pokemon, #container-pokemon2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        margin-left: 20px;
+    }
+    
+}
+
+
+@media (max-width: 1024px){
+    .container-pikachu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .card-pikachu {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    
+    .img-pikachu {
+        position: absolute;
+        left: -35px;
+        top: -20px;
+        width: 200px;
+        height: 200px;
+        margin-top: 100px;
+    }
+    
+    
+    .texto-site {
+        position: absolute;
+        left: 50px;
+        top: 250px;
+        width: 300px;
+        font-size: 40px;
+        color: white;
+    }
+
+    .container-input{
+        display: flex;
+        flex-direction: column;
+        width: 100px;
+        height: 50px;
+        border-radius: 10px;
+        margin-top: 100px;
+        margin-bottom: 80px;
+    
+    }
+
+    .options {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .input-pokemon{
+        width: 200px;
+        margin-right: 20px;
+        margin-bottom: 10px;
+    }
+
+    .option-pokemon{
+        width: 250px;
+        background-color:#ffff00;
+        margin-bottom: 30px;
+        font-size: 15px;
+        border-radius: 20px;
+        border-color: #0288d1;
+    }
+
+    #opcoes {
+        margin-left: 50px;
+        margin-bottom: 10px;
+    }
+
+    #container-pokemon, #container-pokemon2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        margin-left: 20px;
+    }
+    
+}
+
+
 
