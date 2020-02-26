@@ -319,6 +319,7 @@ cardsPokemon.addEventListener('click', function(){
 
 function mostrarModal(){
     const modal = document.getElementById("card1")
+    const cardFechar = document.getElementById("Pokemon")
     const texto = document.getElementById("texto-modal")
     const buttonFechar = document.getElementById("button-fechar")
     modal.classList.add("modal");
@@ -343,14 +344,12 @@ function mostrarModal(){
 
 //FUNÇAO PARA ESCONDER O MODAL//
 
-const btnFechar = document.getElementById('button-fechar')
-btnFechar.classList.add("fechar")
-btnFechar.addEventListener('click', function(){
-    card.innerHTML = `
-    <button>X</button>
-    `   
+const modalFechar = document.getElementById('card1')
+modalFechar.addEventListener('click', function(){
     const modal = document.getElementById("card1")
+    const cardFechar = document.getElementById("Pokemon")
     modal.style.display="none";
+    cardFechar.style.display="none"
 })
 
 //FUNÇÃO PARA MOSTRAR O MODAL2//
