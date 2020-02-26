@@ -314,7 +314,7 @@ cardsPokemon.addEventListener('click', function(){
 
 })
 
-const pokemonTexto = "https://pokeapi.co/api/v2/ability/65"
+
 
 
 function mostrarModal(){
@@ -325,26 +325,32 @@ function mostrarModal(){
     modal.appendChild(buttonFechar)
     modal.appendChild(texto)
 
-    fetch(`https://pokeapi.co/api/v2/ability/65/`)
+    fetch(`https://pokeapi.co/api/v2/pokemon/1`)
 
         .then(function (response) {
             return response.json();
         })
-        .then(function (pokemonTexto) {
-            console.log(pokemonTexto.ability[id].effect_entries.effect)
+        .then(function (pokemon) {
+            console.log(pokemon.height)
+            console.log(pokemon.weight)
         modal.innerHTML = `
-            <p>Detalhes do Pokemon:${pokemonTexto.ability[id].effect_entries.effect}<p>
-            `
+        <p><strong>Detalhes do Pokemon<strong><p>
+        <p>Peso: ${pokemon.weight}</p>
+        <p>Altura: ${pokemon.height}</p>
+        `
         
 })
 
 //FUNÇAO PARA ESCONDER O MODAL//
 
 const btnFechar = document.getElementById('button-fechar')
+btnFechar.classList.add("fechar")
 btnFechar.addEventListener('click', function(){
+    card.innerHTML = `
+    <button>X</button>
+    `   
     const modal = document.getElementById("card1")
     modal.style.display="none";
-       
 })
 
 //FUNÇÃO PARA MOSTRAR O MODAL2//
