@@ -1,4 +1,4 @@
-const input = document.querySelector(".input-pokemon");
+const input = document.querySelector(".input-pokemon-inicial");
 const botao = document.querySelector(".btn-information");
 const container = document.getElementById("container-pokemon");
 const card = document.querySelector('.cards');
@@ -28,12 +28,13 @@ function ConsultarPokemon() {
             console.log(pokemon.results[id].name)
             console.log(pokemon.results[id].url)
             card.innerHTML = `
-        <h1>Name:${pokemon.results[id].name}</h1>
+        <h1>Nome:${pokemon.results[id].name}</h1>
         <img src= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png">
         <h2> Tipo: "https://pokeapi.co/api/v2/type/${id}/"</h2>
         `
-        })
+    })
 }
+
 
 function MostrarSelectedPokemon() {
 
@@ -135,7 +136,7 @@ function MostrarSelectedPokemonVinte() {
     // let name = []
     console.log(selected)
 
-    fetch(`https://pokeapi.co/api/v2/pokemon?offset=10&limit=20`)
+    fetch(`https://pokeapi.co/api/v2/pokemon?offset=11&limit=20`)
 
         .then(function (response) {
             return response.json();
