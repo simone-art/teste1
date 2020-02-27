@@ -307,24 +307,16 @@ function MostrarSelectedPokemonTrinta() {
 
 //FUNÇÃO PARA MOSTRAR O MODAL1//
 
-
 const cardsPokemon = document.getElementById("card1")
 cardsPokemon.addEventListener('click', function(){
     mostrarModal()
 
 })
 
-
-
-
 function mostrarModal(){
     const modal = document.getElementById("card1")
     const cardFechar = document.getElementById("Pokemon")
-    const texto = document.getElementById("texto-modal")
-    const buttonFechar = document.getElementById("button-fechar")
     modal.classList.add("modal");
-    modal.appendChild(buttonFechar)
-    modal.appendChild(texto)
 
     fetch(`https://pokeapi.co/api/v2/pokemon/1`)
 
@@ -340,17 +332,27 @@ function mostrarModal(){
         <p>Altura: ${pokemon.height}</p>
         `
         
-})
-
-//FUNÇAO PARA ESCONDER O MODAL//
-
-const modalFechar = document.getElementById('card1')
-modalFechar.addEventListener('click', function(){
+    })
+    const modalFechar = document.getElementById('card1')
+    modalFechar.addEventListener('click', function(){
     const modal = document.getElementById("card1")
     const cardFechar = document.getElementById("Pokemon")
     modal.style.display="none";
-    cardFechar.style.display="none"
+    cardFechar.style.display="none";
 })
+}
+
+//FUNÇAO PARA ESCONDER O MODAL1//
+
+// const modalFechar = document.getElementById('card1')
+// modalFechar.addEventListener('click', function(){
+//     const modal = document.getElementById("card1")
+//     const cardFechar = document.getElementById("Pokemon")
+//     modal.style.display="none";
+//     cardFechar.style.display="none";
+// })
+
+
 
 //FUNÇÃO PARA MOSTRAR O MODAL2//
 
@@ -362,19 +364,36 @@ cardsPokemon2.addEventListener('click', function(){
 
 function mostrarModalDos(){
     const modal2 = document.getElementById("card2")
-    const buttonFechar2 = document.getElementById("button-fechar-2")
+    const cardFechar2 = document.getElementById("Pokemon2")
     modal2.classList.add("modal-2");
-    modal2.appendChild(buttonFechar2)
+
+    fetch(`https://pokeapi.co/api/v2/pokemon/2`)
+
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (pokemon) {
+            console.log(pokemon.height)
+            console.log(pokemon.weight)
+        modal2.innerHTML = `
+        <p><strong>Detalhes do Pokemon<strong><p>
+        <p>Peso: ${pokemon.weight}</p>
+        <p>Altura: ${pokemon.height}</p>
+        `
+        
+    })
+    //FUNÇAO PARA ESCONDER O MODAL2//
+    
+    const modalFechar2 = document.getElementById('card2')
+    modalFechar2.addEventListener('click', function(){
+        const modal2 = document.getElementById("card2")
+        const cardFechar2 = document.getElementById("Pokemon2")
+        modal2.style.display="none";
+        cardFechar2.style.display="none";
+    })
 }
 
-//FUNÇAO PARA ESCONDER O MODAL//
 
-const btnFechar2 = document.getElementById('button-fechar-2')
-btnFechar2.addEventListener('click', function(){
-    const modal2 = document.getElementById("card2")
-    modal2.style.display="none";
-       
-})
 
 //FUNÇÃO PARA MOSTRAR O MODAL3//
 
@@ -384,21 +403,36 @@ cardsPokemon3.addEventListener('click', function(){
 
 })
 
+
 function mostrarModalTres(){
     const modal3 = document.getElementById("card3")
-    const buttonFechar3 = document.getElementById("button-fechar-3")
+    const cardFechar3 = document.getElementById("Pokemon3")
     modal3.classList.add("modal-3");
-    modal3.appendChild(buttonFechar3)
+
+    fetch(`https://pokeapi.co/api/v2/pokemon/3`)
+
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (pokemon) {
+            console.log(pokemon.height)
+            console.log(pokemon.weight)
+        modal3.innerHTML = `
+        <p><strong>Detalhes do Pokemon<strong><p>
+        <p>Peso: ${pokemon.weight}</p>
+        <p>Altura: ${pokemon.height}</p>
+        `
+        
+    })
+    const modalFechar3 = document.getElementById('card3')
+    modalFechar3.addEventListener('click', function(){
+        const modal3 = document.getElementById("card3")
+        const cardFechar3 = document.getElementById("Pokemon3")
+        modal3.style.display="none";
+        cardFechar3.style.display="none";
+    })
 }
 
-//FUNÇAO PARA ESCONDER O MODAL//
-
-const btnFechar3 = document.getElementById('button-fechar-3')
-btnFechar3.addEventListener('click', function(){
-    const modal3 = document.getElementById("card3")
-    modal3.style.display="none";
-       
-})
 
 
 //FUNÇÃO PARA MOSTRAR O MODAL4//
@@ -411,19 +445,33 @@ cardsPokemon4.addEventListener('click', function(){
 
 function mostrarModalCuatro(){
     const modal4 = document.getElementById("card4")
-    const buttonFechar4 = document.getElementById("button-fechar-4")
+    const cardFechar4 = document.getElementById("Pokemon4")
     modal4.classList.add("modal-4");
-    modal4.appendChild(buttonFechar4)
+
+    fetch(`https://pokeapi.co/api/v2/pokemon/4`)
+
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (pokemon) {
+            console.log(pokemon.height)
+            console.log(pokemon.weight)
+        modal4.innerHTML = `
+        <p><strong>Detalhes do Pokemon<strong><p>
+        <p>Peso: ${pokemon.weight}</p>
+        <p>Altura: ${pokemon.height}</p>
+        `
+        
+    })
+    const modalFechar4 = document.getElementById('card4')
+    modalFechar4.addEventListener('click', function(){
+        const modal4 = document.getElementById("card4")
+        const cardFechar4 = document.getElementById("Pokemon4")
+        modal4.style.display="none";
+        cardFechar4.style.display="none";
+    })
 }
 
-//FUNÇAO PARA ESCONDER O MODAL//
-
-const btnFechar4 = document.getElementById("button-fechar-4")
-btnFechar4.addEventListener('click', function(){
-    const modal4 = document.getElementById("card4")
-    modal4.style.display="none";
-       
-})
 
 
 //FUNÇÃO PARA MOSTRAR O MODAL5//
@@ -436,19 +484,33 @@ cardsPokemon5.addEventListener('click', function(){
 
 function mostrarModalCinco(){
     const modal5 = document.getElementById("card5")
-    const buttonFechar5 = document.getElementById("button-fechar-5")
+    const cardFechar5 = document.getElementById("Pokemon5")
     modal5.classList.add("modal-5");
-    modal5.appendChild(buttonFechar5)
+
+    fetch(`https://pokeapi.co/api/v2/pokemon/5`)
+
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (pokemon) {
+            console.log(pokemon.height)
+            console.log(pokemon.weight)
+        modal5.innerHTML = `
+        <p><strong>Detalhes do Pokemon<strong><p>
+        <p>Peso: ${pokemon.weight}</p>
+        <p>Altura: ${pokemon.height}</p>
+        `
+        
+    })
+
+    const modalFechar5 = document.getElementById('card5')
+    modalFechar5.addEventListener('click', function(){
+        const modal5 = document.getElementById("card5")
+        const cardFechar5 = document.getElementById("Pokemon5")
+        modal5.style.display="none";
+        cardFechar5.style.display="none";
+    })
 }
-
-//FUNÇAO PARA ESCONDER O MODAL//
-
-const btnFechar5 = document.getElementById("button-fechar-5")
-btnFechar5.addEventListener('click', function(){
-    const modal5 = document.getElementById("card5")
-    modal5.style.display="none";
-       
-})
 
 
 //FUNÇÃO PARA MOSTRAR O MODAL6//
@@ -461,19 +523,33 @@ cardsPokemon6.addEventListener('click', function(){
 
 function mostrarModalSeis(){
     const modal6 = document.getElementById("card6")
-    const buttonFechar6 = document.getElementById("button-fechar-6")
+    const cardFechar6 = document.getElementById("Pokemon6")
     modal6.classList.add("modal-6");
-    modal6.appendChild(buttonFechar6)
+
+    fetch(`https://pokeapi.co/api/v2/pokemon/6`)
+
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (pokemon) {
+            console.log(pokemon.height)
+            console.log(pokemon.weight)
+        modal6.innerHTML = `
+        <p><strong>Detalhes do Pokemon<strong><p>
+        <p>Peso: ${pokemon.weight}</p>
+        <p>Altura: ${pokemon.height}</p>
+        `
+        
+    })
+    const modalFechar6 = document.getElementById('card6')
+    modalFechar6.addEventListener('click', function(){
+        const modal6 = document.getElementById("card6")
+        const cardFechar6 = document.getElementById("Pokemon6")
+        modal6.style.display="none";
+        cardFechar6.style.display="none";
+    })
 }
 
-//FUNÇAO PARA ESCONDER O MODAL//
-
-const btnFechar6 = document.getElementById("button-fechar-6")
-btnFechar6.addEventListener('click', function(){
-    const modal6 = document.getElementById("card6")
-    modal6.style.display="none";
-       
-})
 
 
 //FUNÇÃO PARA MOSTRAR O MODAL7//
@@ -486,19 +562,34 @@ cardsPokemon7.addEventListener('click', function(){
 
 function mostrarModalSiete(){
     const modal7 = document.getElementById("card7")
-    const buttonFechar7 = document.getElementById("button-fechar-7")
+    const cardFechar7 = document.getElementById("Pokemon7")
     modal7.classList.add("modal-7");
-    modal7.appendChild(buttonFechar7)
+
+    fetch(`https://pokeapi.co/api/v2/pokemon/7`)
+
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (pokemon) {
+            console.log(pokemon.height)
+            console.log(pokemon.weight)
+        modal7.innerHTML = `
+        <p><strong>Detalhes do Pokemon<strong><p>
+        <p>Peso: ${pokemon.weight}</p>
+        <p>Altura: ${pokemon.height}</p>
+        `
+        
+    })
+    const modalFechar7 = document.getElementById('card7')
+    modalFechar7.addEventListener('click', function(){
+        const modal7 = document.getElementById("card7")
+        const cardFechar7 = document.getElementById("Pokemon7")
+        modal7.style.display="none";
+        cardFechar7.style.display="none";
+    })
 }
 
-//FUNÇAO PARA ESCONDER O MODAL//
 
-const btnFechar7 = document.getElementById("button-fechar-7")
-btnFechar7.addEventListener('click', function(){
-    const modal7 = document.getElementById("card7")
-    modal7.style.display="none";
-       
-})
 
 
 //FUNÇÃO PARA MOSTRAR O MODAL8//
@@ -511,19 +602,34 @@ cardsPokemon8.addEventListener('click', function(){
 
 function mostrarModalOito(){
     const modal8 = document.getElementById("card8")
-    const buttonFechar8 = document.getElementById("button-fechar-8")
+    const cardFechar8 = document.getElementById("Pokemon8")
     modal8.classList.add("modal-8");
-    modal8.appendChild(buttonFechar8)
+
+    fetch(`https://pokeapi.co/api/v2/pokemon/8`)
+
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (pokemon) {
+            console.log(pokemon.height)
+            console.log(pokemon.weight)
+        modal8.innerHTML = `
+        <p><strong>Detalhes do Pokemon<strong><p>
+        <p>Peso: ${pokemon.weight}</p>
+        <p>Altura: ${pokemon.height}</p>
+        `
+        
+    })
+    const modalFechar8 = document.getElementById('card8')
+    modalFechar8.addEventListener('click', function(){
+        const modal8 = document.getElementById("card8")
+        const cardFechar8 = document.getElementById("Pokemon8")
+        modal8.style.display="none";
+        cardFechar8.style.display="none";
+    })
 }
 
-//FUNÇAO PARA ESCONDER O MODAL//
 
-const btnFechar8 = document.getElementById("button-fechar-8")
-btnFechar8.addEventListener('click', function(){
-    const modal8 = document.getElementById("card8")
-    modal8.style.display="none";
-       
-})
 
 
 //FUNÇÃO PARA MOSTRAR O MODAL9//
@@ -534,21 +640,38 @@ cardsPokemon9.addEventListener('click', function(){
 
 })
 
+
 function mostrarModalNove(){
     const modal9 = document.getElementById("card9")
-    const buttonFechar9 = document.getElementById("button-fechar-9")
+    const cardFechar9 = document.getElementById("Pokemon9")
     modal9.classList.add("modal-9");
-    modal9.appendChild(buttonFechar9)
+
+    fetch(`https://pokeapi.co/api/v2/pokemon/9`)
+
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (pokemon) {
+            console.log(pokemon.height)
+            console.log(pokemon.weight)
+        modal9.innerHTML = `
+        <p><strong>Detalhes do Pokemon<strong><p>
+        <p>Peso: ${pokemon.weight}</p>
+        <p>Altura: ${pokemon.height}</p>
+        `
+        
+    })
+    const modalFechar9 = document.getElementById('card9')
+    modalFechar9.addEventListener('click', function(){
+        const modal9 = document.getElementById("card9")
+        const cardFechar9 = document.getElementById("Pokemon9")
+        modal9.style.display="none";
+        cardFechar9.style.display="none";
+    })
 }
 
-//FUNÇAO PARA ESCONDER O MODAL//
 
-const btnFechar9 = document.getElementById("button-fechar-9")
-btnFechar9.addEventListener('click', function(){
-    const modal9 = document.getElementById("card9")
-    modal9.style.display="none";
-       
-})
+
 
 //FUNÇÃO PARA MOSTRAR O MODAL10//
 
@@ -560,19 +683,34 @@ cardsPokemon10.addEventListener('click', function(){
 
 function mostrarModalDez(){
     const modal10 = document.getElementById("card10")
-    const buttonFechar10 = document.getElementById("button-fechar-10")
+    const cardFechar10 = document.getElementById("Pokemon10")
     modal10.classList.add("modal-10");
-    modal10.appendChild(buttonFechar10)
+
+    fetch(`https://pokeapi.co/api/v2/pokemon/10`)
+
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (pokemon) {
+            console.log(pokemon.height)
+            console.log(pokemon.weight)
+        modal10.innerHTML = `
+        <p><strong>Detalhes do Pokemon<strong><p>
+        <p>Peso: ${pokemon.weight}</p>
+        <p>Altura: ${pokemon.height}</p>
+        `
+        
+    })
+    const modalFechar10 = document.getElementById('card10')
+    modalFechar10.addEventListener('click', function(){
+        const modal10 = document.getElementById("card10")
+        const cardFechar10 = document.getElementById("Pokemon10")
+        modal10.style.display="none";
+        cardFechar10.style.display="none";
+    })
 }
 
-//FUNÇAO PARA ESCONDER O MODAL//
 
-const btnFechar10 = document.getElementById("button-fechar-10")
-btnFechar10.addEventListener('click', function(){
-    const modal10 = document.getElementById("card10")
-    modal10.style.display="none";
-       
-})
 
 
 //FUNÇÃO PARA MOSTRAR O MODAL11//
@@ -585,19 +723,33 @@ cardsPokemon11.addEventListener('click', function(){
 
 function mostrarModalOnce(){
     const modal11 = document.getElementById("card11")
-    const buttonFechar11 = document.getElementById("button-fechar-11")
+    const cardFechar11 = document.getElementById("Pokemon11")
     modal11.classList.add("modal-11");
-    modal11.appendChild(buttonFechar11)
+
+    fetch(`https://pokeapi.co/api/v2/pokemon/11`)
+
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (pokemon) {
+            console.log(pokemon.height)
+            console.log(pokemon.weight)
+        modal11.innerHTML = `
+        <p><strong>Detalhes do Pokemon<strong><p>
+        <p>Peso: ${pokemon.weight}</p>
+        <p>Altura: ${pokemon.height}</p>
+        `
+        
+    })
+    const modalFechar11 = document.getElementById('card11')
+    modalFechar11.addEventListener('click', function(){
+        const modal11 = document.getElementById("card11")
+        const cardFechar11 = document.getElementById("Pokemon11")
+        modal11.style.display="none";
+        cardFechar11.style.display="none";
+    })
 }
 
-//FUNÇAO PARA ESCONDER O MODAL//
-
-const btnFechar11 = document.getElementById("button-fechar-11")
-btnFechar11.addEventListener('click', function(){
-    const modal11 = document.getElementById("card11")
-    modal11.style.display="none";
-       
-})
 
 
 //FUNÇÃO PARA MOSTRAR O MODAL12//
@@ -610,19 +762,33 @@ cardsPokemon12.addEventListener('click', function(){
 
 function mostrarModalDoce(){
     const modal12 = document.getElementById("card12")
-    const buttonFechar12 = document.getElementById("button-fechar-12")
+    const cardFechar12 = document.getElementById("Pokemon12")
     modal12.classList.add("modal-12");
-    modal12.appendChild(buttonFechar12)
+
+    fetch(`https://pokeapi.co/api/v2/pokemon/12`)
+
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (pokemon) {
+            console.log(pokemon.height)
+            console.log(pokemon.weight)
+        modal12.innerHTML = `
+        <p><strong>Detalhes do Pokemon<strong><p>
+        <p>Peso: ${pokemon.weight}</p>
+        <p>Altura: ${pokemon.height}</p>
+        `
+        
+    })
+    const modalFechar12 = document.getElementById('card12')
+    modalFechar12.addEventListener('click', function(){
+        const modal12 = document.getElementById("card12")
+        const cardFechar12 = document.getElementById("Pokemon12")
+        modal12.style.display="none";
+        cardFechar12.style.display="none";
+    })
 }
 
-//FUNÇAO PARA ESCONDER O MODAL//
-
-const btnFechar12 = document.getElementById("button-fechar-12")
-btnFechar12.addEventListener('click', function(){
-    const modal12 = document.getElementById("card12")
-    modal12.style.display="none";
-       
-})
 
 
 //FUNÇÃO PARA MOSTRAR O MODAL13//
@@ -635,19 +801,32 @@ cardsPokemon13.addEventListener('click', function(){
 
 function mostrarModalTrece(){
     const modal13 = document.getElementById("card13")
-    const buttonFechar13 = document.getElementById("button-fechar-13")
+    const cardFechar13 = document.getElementById("Pokemon13")
     modal13.classList.add("modal-13");
-    modal13.appendChild(buttonFechar13)
+
+    fetch(`https://pokeapi.co/api/v2/pokemon/13`)
+
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (pokemon) {
+            console.log(pokemon.height)
+            console.log(pokemon.weight)
+        modal13.innerHTML = `
+        <p><strong>Detalhes do Pokemon<strong><p>
+        <p>Peso: ${pokemon.weight}</p>
+        <p>Altura: ${pokemon.height}</p>
+        `
+        
+    })
+    const modalFechar13 = document.getElementById('card13')
+    modalFechar13.addEventListener('click', function(){
+        const modal13 = document.getElementById("card13")
+        const cardFechar13 = document.getElementById("Pokemon13")
+        modal13.style.display="none";
+        cardFechar13.style.display="none";
+    })
 }
-
-//FUNÇAO PARA ESCONDER O MODAL//
-
-const btnFechar13 = document.getElementById("button-fechar-13")
-btnFechar13.addEventListener('click', function(){
-    const modal13 = document.getElementById("card13")
-    modal13.style.display="none";
-       
-})
 
 
 //FUNÇÃO PARA MOSTRAR O MODAL14//
@@ -660,19 +839,32 @@ cardsPokemon14.addEventListener('click', function(){
 
 function mostrarModalCatorce(){
     const modal14 = document.getElementById("card14")
-    const buttonFechar14 = document.getElementById("button-fechar-14")
+    const cardFechar14 = document.getElementById("Pokemon14")
     modal14.classList.add("modal-14");
-    modal14.appendChild(buttonFechar14)
+
+    fetch(`https://pokeapi.co/api/v2/pokemon/14`)
+
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (pokemon) {
+            console.log(pokemon.height)
+            console.log(pokemon.weight)
+        modal14.innerHTML = `
+        <p><strong>Detalhes do Pokemon<strong><p>
+        <p>Peso: ${pokemon.weight}</p>
+        <p>Altura: ${pokemon.height}</p>
+        `
+        
+    })
+    const modalFechar14 = document.getElementById('card14')
+    modalFechar14.addEventListener('click', function(){
+        const modal14 = document.getElementById("card14")
+        const cardFechar14 = document.getElementById("Pokemon14")
+        modal14.style.display="none";
+        cardFechar14.style.display="none";
+    })
 }
-
-//FUNÇAO PARA ESCONDER O MODAL//
-
-const btnFechar14 = document.getElementById("button-fechar-14")
-btnFechar14.addEventListener('click', function(){
-    const modal14 = document.getElementById("card14")
-    modal14.style.display="none";
-       
-})
 
 
 
@@ -686,20 +878,32 @@ cardsPokemon15.addEventListener('click', function(){
 
 function mostrarModalQuince(){
     const modal15 = document.getElementById("card15")
-    const buttonFechar15 = document.getElementById("button-fechar-15")
+    const cardFechar15 = document.getElementById("Pokemon15")
     modal15.classList.add("modal-15");
-    modal15.appendChild(buttonFechar15)
+
+    fetch(`https://pokeapi.co/api/v2/pokemon/15`)
+
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (pokemon) {
+            console.log(pokemon.height)
+            console.log(pokemon.weight)
+        modal15.innerHTML = `
+        <p><strong>Detalhes do Pokemon<strong><p>
+        <p>Peso: ${pokemon.weight}</p>
+        <p>Altura: ${pokemon.height}</p>
+        `
+        
+    })
+    const modalFechar15 = document.getElementById('card15')
+    modalFechar15.addEventListener('click', function(){
+        const modal15 = document.getElementById("card15")
+        const cardFechar15 = document.getElementById("Pokemon15")
+        modal15.style.display="none";
+        cardFechar15.style.display="none";
+    })
 }
-
-//FUNÇAO PARA ESCONDER O MODAL//
-
-const btnFechar15 = document.getElementById("button-fechar-15")
-btnFechar15.addEventListener('click', function(){
-    const modal15 = document.getElementById("card15")
-    modal15.style.display="none";
-       
-})
-
 
 
 //FUNÇÃO PARA MOSTRAR O MODAL16//
@@ -712,19 +916,33 @@ cardsPokemon16.addEventListener('click', function(){
 
 function mostrarModalDieciseis(){
     const modal16 = document.getElementById("card16")
-    const buttonFechar16 = document.getElementById("button-fechar-16")
+    const cardFechar16 = document.getElementById("Pokemon16")
     modal16.classList.add("modal-16");
-    modal16.appendChild(buttonFechar16)
+
+    fetch(`https://pokeapi.co/api/v2/pokemon/16`)
+
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (pokemon) {
+            console.log(pokemon.height)
+            console.log(pokemon.weight)
+        modal16.innerHTML = `
+        <p><strong>Detalhes do Pokemon<strong><p>
+        <p>Peso: ${pokemon.weight}</p>
+        <p>Altura: ${pokemon.height}</p>
+        `
+        
+    })
+    const modalFechar16 = document.getElementById('card16')
+    modalFechar16.addEventListener('click', function(){
+        const modal16 = document.getElementById("card16")
+        const cardFechar16 = document.getElementById("Pokemon16")
+        modal16.style.display="none";
+        cardFechar16.style.display="none";
+    })
 }
 
-//FUNÇAO PARA ESCONDER O MODAL//
-
-const btnFechar16 = document.getElementById("button-fechar-16")
-btnFechar16.addEventListener('click', function(){
-    const modal16 = document.getElementById("card16")
-    modal16.style.display="none";
-       
-})
 
 
 //FUNÇÃO PARA MOSTRAR O MODAL17//
@@ -735,21 +953,36 @@ cardsPokemon17.addEventListener('click', function(){
 
 })
 
+
 function mostrarModalDiecisiete(){
     const modal17 = document.getElementById("card17")
-    const buttonFechar17 = document.getElementById("button-fechar-17")
+    const cardFechar17 = document.getElementById("Pokemon17")
     modal17.classList.add("modal-17");
-    modal17.appendChild(buttonFechar17)
+
+    fetch(`https://pokeapi.co/api/v2/pokemon/17`)
+
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (pokemon) {
+            console.log(pokemon.height)
+            console.log(pokemon.weight)
+        modal17.innerHTML = `
+        <p><strong>Detalhes do Pokemon<strong><p>
+        <p>Peso: ${pokemon.weight}</p>
+        <p>Altura: ${pokemon.height}</p>
+        `
+        
+    })
+    const modalFechar17 = document.getElementById('card17')
+    modalFechar17.addEventListener('click', function(){
+        const modal17 = document.getElementById("card17")
+        const cardFechar17 = document.getElementById("Pokemon17")
+        modal17.style.display="none";
+        cardFechar17.style.display="none";
+    })
+
 }
-
-//FUNÇAO PARA ESCONDER O MODAL//
-
-const btnFechar17 = document.getElementById("button-fechar-17")
-btnFechar17.addEventListener('click', function(){
-    const modal17 = document.getElementById("card17")
-    modal17.style.display="none";
-       
-})
 
 
 //FUNÇÃO PARA MOSTRAR O MODAL18//
@@ -762,19 +995,32 @@ cardsPokemon18.addEventListener('click', function(){
 
 function mostrarModalDieciocho(){
     const modal18 = document.getElementById("card18")
-    const buttonFechar18 = document.getElementById("button-fechar-18")
+    const cardFechar18 = document.getElementById("Pokemon18")
     modal18.classList.add("modal-18");
-    modal18.appendChild(buttonFechar18)
+
+    fetch(`https://pokeapi.co/api/v2/pokemon/18`)
+
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (pokemon) {
+            console.log(pokemon.height)
+            console.log(pokemon.weight)
+        modal18.innerHTML = `
+        <p><strong>Detalhes do Pokemon<strong><p>
+        <p>Peso: ${pokemon.weight}</p>
+        <p>Altura: ${pokemon.height}</p>
+        `
+        
+    })
+    const modalFechar18 = document.getElementById('card18')
+    modalFechar18.addEventListener('click', function(){
+        const modal18 = document.getElementById("card18")
+        const cardFechar18 = document.getElementById("Pokemon18")
+        modal18.style.display="none";
+        cardFechar18.style.display="none";
+    })
 }
-
-//FUNÇAO PARA ESCONDER O MODAL//
-
-const btnFechar18 = document.getElementById("button-fechar-18")
-btnFechar18.addEventListener('click', function(){
-    const modal18 = document.getElementById("card18")
-    modal18.style.display="none";
-       
-})
 
 
 //FUNÇÃO PARA MOSTRAR O MODAL19//
@@ -787,19 +1033,32 @@ cardsPokemon19.addEventListener('click', function(){
 
 function mostrarModalDiecinueve(){
     const modal19 = document.getElementById("card19")
-    const buttonFechar19 = document.getElementById("button-fechar-19")
+    const cardFechar19 = document.getElementById("Pokemon19")
     modal19.classList.add("modal-19");
-    modal19.appendChild(buttonFechar19)
+
+    fetch(`https://pokeapi.co/api/v2/pokemon/19`)
+
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (pokemon) {
+            console.log(pokemon.height)
+            console.log(pokemon.weight)
+        modal19.innerHTML = `
+        <p><strong>Detalhes do Pokemon<strong><p>
+        <p>Peso: ${pokemon.weight}</p>
+        <p>Altura: ${pokemon.height}</p>
+        `
+        
+    })
+    const modalFechar19 = document.getElementById('card19')
+    modalFechar19.addEventListener('click', function(){
+        const modal19 = document.getElementById("card19")
+        const cardFechar19 = document.getElementById("Pokemon19")
+        modal19.style.display="none";
+        cardFechar19.style.display="none";
+    })
 }
-
-//FUNÇAO PARA ESCONDER O MODAL//
-
-const btnFechar19 = document.getElementById("button-fechar-19")
-btnFechar19.addEventListener('click', function(){
-    const modal19 = document.getElementById("card19")
-    modal19.style.display="none";
-       
-})
 
 
 //FUNÇÃO PARA MOSTRAR O MODAL20//
@@ -812,19 +1071,32 @@ cardsPokemon20.addEventListener('click', function(){
 
 function mostrarModalVinte(){
     const modal20 = document.getElementById("card20")
-    const buttonFechar20 = document.getElementById("button-fechar-20")
+    const cardFechar20 = document.getElementById("Pokemon20")
     modal20.classList.add("modal-20");
-    modal20.appendChild(buttonFechar20)
+
+    fetch(`https://pokeapi.co/api/v2/pokemon/20`)
+
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (pokemon) {
+            console.log(pokemon.height)
+            console.log(pokemon.weight)
+        modal20.innerHTML = `
+        <p><strong>Detalhes do Pokemon<strong><p>
+        <p>Peso: ${pokemon.weight}</p>
+        <p>Altura: ${pokemon.height}</p>
+        `
+        
+    })
+    const modalFechar20 = document.getElementById('card20')
+    modalFechar20.addEventListener('click', function(){
+        const modal20 = document.getElementById("card20")
+        const cardFechar20 = document.getElementById("Pokemon20")
+        modal20.style.display="none";
+        cardFechar20.style.display="none";
+    })
 }
-
-//FUNÇAO PARA ESCONDER O MODAL//
-
-const btnFechar20 = document.getElementById("button-fechar-20")
-btnFechar20.addEventListener('click', function(){
-    const modal20 = document.getElementById("card20")
-    modal20.style.display="none";
-       
-})
 
 
 //FUNÇÃO PARA MOSTRAR O MODAL21//
@@ -837,20 +1109,32 @@ cardsPokemon21.addEventListener('click', function(){
 
 function mostrarModalVentiuno(){
     const modal21 = document.getElementById("card21")
-    const buttonFechar21 = document.getElementById("button-fechar-21")
+    const cardFechar21 = document.getElementById("Pokemon21")
     modal21.classList.add("modal-21");
-    modal21.appendChild(buttonFechar21)
+
+    fetch(`https://pokeapi.co/api/v2/pokemon/21`)
+
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (pokemon) {
+            console.log(pokemon.height)
+            console.log(pokemon.weight)
+        modal21.innerHTML = `
+        <p><strong>Detalhes do Pokemon<strong><p>
+        <p>Peso: ${pokemon.weight}</p>
+        <p>Altura: ${pokemon.height}</p>
+        `
+        
+    })
+    const modalFechar21 = document.getElementById('card21')
+    modalFechar21.addEventListener('click', function(){
+        const modal21 = document.getElementById("card21")
+        const cardFechar21 = document.getElementById("Pokemon21")
+        modal21.style.display="none";
+        cardFechar21.style.display="none";
+    })
 }
-
-//FUNÇAO PARA ESCONDER O MODAL//
-
-const btnFechar21 = document.getElementById("button-fechar-21")
-btnFechar21.addEventListener('click', function(){
-    const modal21 = document.getElementById("card21")
-    modal21.style.display="none";
-       
-})
-
 
 //FUNÇÃO PARA MOSTRAR O MODAL22//
 
@@ -862,21 +1146,32 @@ cardsPokemon22.addEventListener('click', function(){
 
 function mostrarModalVentidos(){
     const modal22 = document.getElementById("card22")
-    const buttonFechar22 = document.getElementById("button-fechar-22")
+    const cardFechar22 = document.getElementById("Pokemon22")
     modal22.classList.add("modal-22");
-    modal22.appendChild(buttonFechar22)
+
+    fetch(`https://pokeapi.co/api/v2/pokemon/22`)
+
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (pokemon) {
+            console.log(pokemon.height)
+            console.log(pokemon.weight)
+        modal22.innerHTML = `
+        <p><strong>Detalhes do Pokemon<strong><p>
+        <p>Peso: ${pokemon.weight}</p>
+        <p>Altura: ${pokemon.height}</p>
+        `
+        
+    })
+    const modalFechar22 = document.getElementById('card22')
+    modalFechar22.addEventListener('click', function(){
+        const modal22 = document.getElementById("card22")
+        const cardFechar22 = document.getElementById("Pokemon22")
+        modal22.style.display="none";
+        cardFechar22.style.display="none";
+    })
 }
-
-//FUNÇAO PARA ESCONDER O MODAL//
-
-const btnFechar22 = document.getElementById("button-fechar-22")
-btnFechar22.addEventListener('click', function(){
-    const modal22 = document.getElementById("card22")
-    modal22.style.display="none";
-       
-})
-
-
 
 //FUNÇÃO PARA MOSTRAR O MODAL23//
 
@@ -888,19 +1183,32 @@ cardsPokemon23.addEventListener('click', function(){
 
 function mostrarModalVentitres(){
     const modal23 = document.getElementById("card23")
-    const buttonFechar23 = document.getElementById("button-fechar-23")
+    const cardFechar23 = document.getElementById("Pokemon23")
     modal23.classList.add("modal-23");
-    modal23.appendChild(buttonFechar23)
+
+    fetch(`https://pokeapi.co/api/v2/pokemon/23`)
+
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (pokemon) {
+            console.log(pokemon.height)
+            console.log(pokemon.weight)
+        modal23.innerHTML = `
+        <p><strong>Detalhes do Pokemon<strong><p>
+        <p>Peso: ${pokemon.weight}</p>
+        <p>Altura: ${pokemon.height}</p>
+        `
+        
+    })
+    const modalFechar23 = document.getElementById('card23')
+    modalFechar23.addEventListener('click', function(){
+        const modal23 = document.getElementById("card23")
+        const cardFechar23 = document.getElementById("Pokemon23")
+        modal23.style.display="none";
+        cardFechar23.style.display="none";
+    })
 }
-
-//FUNÇAO PARA ESCONDER O MODAL//
-
-const btnFechar23 = document.getElementById("button-fechar-23")
-btnFechar23.addEventListener('click', function(){
-    const modal23 = document.getElementById("card23")
-    modal23.style.display="none";
-       
-})
 
 
 //FUNÇÃO PARA MOSTRAR O MODAL24//
@@ -913,20 +1221,32 @@ cardsPokemon24.addEventListener('click', function(){
 
 function mostrarModalVenticuatro(){
     const modal24 = document.getElementById("card24")
-    const buttonFechar24 = document.getElementById("button-fechar-24")
+    const cardFechar24 = document.getElementById("Pokemon24")
     modal24.classList.add("modal-24");
-    modal24.appendChild(buttonFechar24)
+
+    fetch(`https://pokeapi.co/api/v2/pokemon/24`)
+
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (pokemon) {
+            console.log(pokemon.height)
+            console.log(pokemon.weight)
+        modal24.innerHTML = `
+        <p><strong>Detalhes do Pokemon<strong><p>
+        <p>Peso: ${pokemon.weight}</p>
+        <p>Altura: ${pokemon.height}</p>
+        `
+        
+    })
+    const modalFechar24 = document.getElementById('card24')
+    modalFechar24.addEventListener('click', function(){
+        const modal24 = document.getElementById("card24")
+        const cardFechar24 = document.getElementById("Pokemon24")
+        modal24.style.display="none";
+        cardFechar24.style.display="none";
+    })
 }
-
-//FUNÇAO PARA ESCONDER O MODAL//
-
-const btnFechar24 = document.getElementById("button-fechar-24")
-btnFechar24.addEventListener('click', function(){
-    const modal24 = document.getElementById("card24")
-    modal24.style.display="none";
-       
-})
-
 
 //FUNÇÃO PARA MOSTRAR O MODAL25//
 
@@ -938,20 +1258,32 @@ cardsPokemon25.addEventListener('click', function(){
 
 function mostrarModalVenticinco(){
     const modal25 = document.getElementById("card25")
-    const buttonFechar25 = document.getElementById("button-fechar-25")
+    const cardFechar25 = document.getElementById("Pokemon25")
     modal25.classList.add("modal-25");
-    modal25.appendChild(buttonFechar25)
+
+    fetch(`https://pokeapi.co/api/v2/pokemon/25`)
+
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (pokemon) {
+            console.log(pokemon.height)
+            console.log(pokemon.weight)
+        modal25.innerHTML = `
+        <p><strong>Detalhes do Pokemon<strong><p>
+        <p>Peso: ${pokemon.weight}</p>
+        <p>Altura: ${pokemon.height}</p>
+        `
+        
+    })
+    const modalFechar25 = document.getElementById('card25')
+    modalFechar25.addEventListener('click', function(){
+        const modal25 = document.getElementById("card25")
+        const cardFechar25 = document.getElementById("Pokemon25")
+        modal25.style.display="none";
+        cardFechar25.style.display="none";
+    })
 }
-
-//FUNÇAO PARA ESCONDER O MODAL//
-
-const btnFechar25 = document.getElementById("button-fechar-25")
-btnFechar25.addEventListener('click', function(){
-    const modal25 = document.getElementById("card25")
-    modal25.style.display="none";
-       
-})
-
 
 //FUNÇÃO PARA MOSTRAR O MODAL26//
 
@@ -963,21 +1295,32 @@ cardsPokemon26.addEventListener('click', function(){
 
 function mostrarModalVentiseis(){
     const modal26 = document.getElementById("card26")
-    const buttonFechar26 = document.getElementById("button-fechar-26")
+    const cardFechar26 = document.getElementById("Pokemon26")
     modal26.classList.add("modal-26");
-    modal26.appendChild(buttonFechar26)
+
+    fetch(`https://pokeapi.co/api/v2/pokemon/26`)
+
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (pokemon) {
+            console.log(pokemon.height)
+            console.log(pokemon.weight)
+        modal26.innerHTML = `
+        <p><strong>Detalhes do Pokemon<strong><p>
+        <p>Peso: ${pokemon.weight}</p>
+        <p>Altura: ${pokemon.height}</p>
+        `
+        
+    })
+    const modalFechar26 = document.getElementById('card26')
+    modalFechar26.addEventListener('click', function(){
+        const modal26 = document.getElementById("card26")
+        const cardFechar26 = document.getElementById("Pokemon26")
+        modal26.style.display="none";
+        cardFechar26.style.display="none";
+    })
 }
-
-//FUNÇAO PARA ESCONDER O MODAL//
-
-const btnFechar26 = document.getElementById("button-fechar-26")
-btnFechar26.addEventListener('click', function(){
-    const modal26 = document.getElementById("card26")
-    modal26.style.display="none";
-       
-})
-
-
 
 //FUNÇÃO PARA MOSTRAR O MODAL27//
 
@@ -989,19 +1332,32 @@ cardsPokemon27.addEventListener('click', function(){
 
 function mostrarModalVentisiete(){
     const modal27 = document.getElementById("card27")
-    const buttonFechar27 = document.getElementById("button-fechar-27")
+    const cardFechar27 = document.getElementById("Pokemon27")
     modal27.classList.add("modal-27");
-    modal27.appendChild(buttonFechar27)
+
+    fetch(`https://pokeapi.co/api/v2/pokemon/27`)
+
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (pokemon) {
+            console.log(pokemon.height)
+            console.log(pokemon.weight)
+        modal27.innerHTML = `
+        <p><strong>Detalhes do Pokemon<strong><p>
+        <p>Peso: ${pokemon.weight}</p>
+        <p>Altura: ${pokemon.height}</p>
+        `
+        
+    })
+    const modalFechar27 = document.getElementById('card27')
+    modalFechar27.addEventListener('click', function(){
+        const modal27 = document.getElementById("card27")
+        const cardFechar27 = document.getElementById("Pokemon27")
+        modal27.style.display="none";
+        cardFechar27.style.display="none";
+    })
 }
-
-//FUNÇAO PARA ESCONDER O MODAL//
-
-const btnFechar27 = document.getElementById("button-fechar-27")
-btnFechar27.addEventListener('click', function(){
-    const modal27 = document.getElementById("card27")
-    modal27.style.display="none";
-       
-})
 
 
 //FUNÇÃO PARA MOSTRAR O MODAL28//
@@ -1012,22 +1368,36 @@ cardsPokemon28.addEventListener('click', function(){
 
 })
 
+
 function mostrarModalVentiocho(){
     const modal28 = document.getElementById("card28")
-    const buttonFechar28 = document.getElementById("button-fechar-28")
+    const cardFechar28 = document.getElementById("Pokemon28")
     modal28.classList.add("modal-28");
-    modal28.appendChild(buttonFechar28)
+
+    fetch(`https://pokeapi.co/api/v2/pokemon/28`)
+
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (pokemon) {
+            console.log(pokemon.height)
+            console.log(pokemon.weight)
+        modal28.innerHTML = `
+        <p><strong>Detalhes do Pokemon<strong><p>
+        <p>Peso: ${pokemon.weight}</p>
+        <p>Altura: ${pokemon.height}</p>
+        `
+        
+    })
+    
+    const modalFechar28 = document.getElementById('card28')
+    modalFechar28.addEventListener('click', function(){
+        const modal28 = document.getElementById("card28")
+        const cardFechar28 = document.getElementById("Pokemon28")
+        modal28.style.display="none";
+        cardFechar28.style.display="none";
+    })
 }
-
-//FUNÇAO PARA ESCONDER O MODAL//
-
-const btnFechar28 = document.getElementById("button-fechar-28")
-btnFechar28.addEventListener('click', function(){
-    const modal28 = document.getElementById("card28")
-    modal28.style.display="none";
-       
-})
-
 
 
 //FUNÇÃO PARA MOSTRAR O MODAL29//
@@ -1037,23 +1407,34 @@ cardsPokemon29.addEventListener('click', function(){
     mostrarModalVentinueve()
 
 })
-
 function mostrarModalVentinueve(){
     const modal29 = document.getElementById("card29")
-    const buttonFechar29 = document.getElementById("button-fechar-29")
+    const cardFechar29 = document.getElementById("Pokemon29")
     modal29.classList.add("modal-29");
-    modal29.appendChild(buttonFechar29)
+
+    fetch(`https://pokeapi.co/api/v2/pokemon/29`)
+
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (pokemon) {
+            console.log(pokemon.height)
+            console.log(pokemon.weight)
+        modal29.innerHTML = `
+        <p><strong>Detalhes do Pokemon<strong><p>
+        <p>Peso: ${pokemon.weight}</p>
+        <p>Altura: ${pokemon.height}</p>
+        `
+        
+    })
+    const modalFechar29 = document.getElementById('card29')
+    modalFechar29.addEventListener('click', function(){
+        const modal29 = document.getElementById("card29")
+        const cardFechar29 = document.getElementById("Pokemon29")
+        modal29.style.display="none";
+        cardFechar29.style.display="none";
+    })
 }
-
-//FUNÇAO PARA ESCONDER O MODAL//
-
-const btnFechar29 = document.getElementById("button-fechar-29")
-btnFechar29.addEventListener('click', function(){
-    const modal29 = document.getElementById("card29")
-    modal29.style.display="none";
-       
-})
-
 
 //FUNÇÃO PARA MOSTRAR O MODAL30//
 
@@ -1063,20 +1444,36 @@ cardsPokemon30.addEventListener('click', function(){
 
 })
 
+
 function mostrarModalTreinta(){
     const modal30 = document.getElementById("card30")
-    const buttonFechar30 = document.getElementById("button-fechar-30")
+    const cardFechar30 = document.getElementById("Pokemon30")
     modal30.classList.add("modal-30");
-    modal30.appendChild(buttonFechar30)
+
+    fetch(`https://pokeapi.co/api/v2/pokemon/30`)
+
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (pokemon) {
+            console.log(pokemon.height)
+            console.log(pokemon.weight)
+        modal30.innerHTML = `
+        <p><strong>Detalhes do Pokemon<strong><p>
+        <p>Peso: ${pokemon.weight}</p>
+        <p>Altura: ${pokemon.height}</p>
+        `
+        
+    })
+    const modalFechar30 = document.getElementById('card30')
+    modalFechar30.addEventListener('click', function(){
+        const modal30 = document.getElementById("card30")
+        const cardFechar30 = document.getElementById("Pokemon30")
+        modal30.style.display="none";
+        cardFechar30.style.display="none";
+    })
 }
 
-//FUNÇAO PARA ESCONDER O MODAL//
 
-const btnFechar30 = document.getElementById("button-fechar-30")
-btnFechar30.addEventListener('click', function(){
-    const modal30 = document.getElementById("card30")
-    modal30.style.display="none";
-       
-})
 
-}
+
